@@ -12,8 +12,9 @@ public class F_Bike extends F_Vehicle{
         System.out.println("Sound volume: " + soundVolume);
     }
     public void printBike(){
-        bike();
+
         printVehicle();
+        bike();
     }
 
 }

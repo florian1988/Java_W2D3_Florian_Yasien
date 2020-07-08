@@ -15,7 +15,8 @@ public class F_Truck extends F_Vehicle{
         }
 
         public void printTruck(){
-            truck();
+
             printVehicle();
+            truck();
         }
 }
