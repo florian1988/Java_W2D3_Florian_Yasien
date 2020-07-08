@@ -61,6 +61,7 @@ public class F_A2 {
         for(String city : ListCities){
             System.out.println(city);
         }
+        System.out.println();
         // 4 methods
 
         System.out.println(ListCities.spliterator());
