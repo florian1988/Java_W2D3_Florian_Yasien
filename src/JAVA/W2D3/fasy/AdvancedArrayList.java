@@ -141,14 +141,12 @@ public class AdvancedArrayList {
         }
 
 
-
-
         System.out.println();
         System.out.println("==========SOOOORRRTTIIINNNNGGGGG=====CITIZEEENNNSSS================");
         System.out.println();
 
 
-        Comparator<City> citizensComparator = new Comparator<City>() {
+        Comparator<City> citizensComparatorAsc = new Comparator<City>() {
             @Override
             public int compare(City c1, City c2) {
                 if (c1.getCitizensNum() < c2.getCitizensNum()){
@@ -163,12 +161,35 @@ public class AdvancedArrayList {
             }
         };
 
-        Collections.sort(Cities, citizensComparator);
 
+        Comparator<City> citizensComparatorDesc = new Comparator<City>() {
+            @Override
+            public int compare(City c1, City c2) {
+                if (c1.getCitizensNum() > c2.getCitizensNum()){
+                    return -1;
+                }
+                else if(c1.getCitizensNum() < c2.getCitizensNum()){
+                    return 1;
+                }
+                else{
+                    return 0;
+                }
+            }
+        };
+
+
+        System.out.println("citizensComparatorAsc");
+        Collections.sort(Cities, citizensComparatorAsc);
 
         for(City c : Cities){
             System.out.println(c);
         }
+        System.out.println("citizensComparatorDesc");
+        Collections.sort(Cities, citizensComparatorDesc);
+        for(City c : Cities){
+            System.out.println(c);
+        }
+
 
 
     }
